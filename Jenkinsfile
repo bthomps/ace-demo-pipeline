@@ -17,8 +17,6 @@ pipeline {
         sh  '''#!/bin/bash
             # Set HOME to somewhere writable by Maven
             export HOME=/tmp
-            mkdir /tmp/mqsiworkpath
-            export MQSI_WORKPATH=/tmp/mqsiworkpath
 
             # Clean up just in case files have been left around
             rm -f */maven-reports/TEST*.xml
