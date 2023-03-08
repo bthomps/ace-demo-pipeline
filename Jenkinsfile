@@ -5,9 +5,9 @@ pipeline {
     /* the Config File Provider plugin (or equivalent), but this is good enough   */
     /* for a demo of ACE pipelines that isn't intended as a Jenkins tutorial.     */
     string(name: 'databaseName', defaultValue: 'BLUDB', description: 'JDBC database name')
-    string(name: 'serverName',   defaultValue: '19af6446-6171-4641-8aba-9dcff8e1b6ff.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud', description: 'JDBC database host')
-    string(name: 'portNumber',   defaultValue: '30699', description: 'JDBC database port')
-    string(name: 'integrationNodeHost',   defaultValue: '10.0.0.2', description: 'Integration node REST API host or IP address')
+    string(name: 'serverName',   defaultValue: '764264db-9824-4b7c-82df-40d1b13897c2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud', description: 'JDBC database host')
+    string(name: 'portNumber',   defaultValue: '32536', description: 'JDBC database port')
+    string(name: 'integrationNodeHost',   defaultValue: 'unfixes1.fyre.ibm.com', description: 'Integration node REST API host or IP address')
     string(name: 'integrationNodePort',   defaultValue: '4414', description: 'Integration node REST API port')
     string(name: 'integrationServerName',   defaultValue: 'default', description: 'Integration server name')
   }
