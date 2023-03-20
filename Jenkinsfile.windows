@@ -43,7 +43,7 @@ pipeline {
       steps {
         bat '''
             mkdir %TEMP%\\ace-server\\run\\CTPolicies
-            echo "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><ns2:policyProjectDescriptor xmlns=\"http://com.ibm.etools.mft.descriptor.base\" xmlns:ns2=\"http://com.ibm.etools.mft.descriptor.policyProject\"><references/></ns2:policyProjectDescriptor>" >  %TEMP%\\ace-server\\run\\CTPolicies\\policy.descriptor
+            echo ^<?xml version="1.0" encoding="UTF-8" standalone="yes"?^>^<ns2:policyProjectDescriptor xmlns="http://com.ibm.etools.mft.descriptor.base" xmlns:ns2="http://com.ibm.etools.mft.descriptor.policyProject"^>^<references/^>^</ns2:policyProjectDescriptor^> >  %TEMP%\\ace-server\\run\\CTPolicies\\policy.descriptor
             echo.Defaults: > %TEMP%\\ace-server\\overrides\\server.conf.yaml
             echo.  policyProject: CTPolicies >> %TEMP%\\ace-server\\overrides\\server.conf.yaml
             CALL "%ACE_COMMAND%" mqsisetdbparms -w %TEMP%\\ace-server -n jdbc::tea -u %CT_JDBC_USR% -p %CT_JDBC_PSW%
