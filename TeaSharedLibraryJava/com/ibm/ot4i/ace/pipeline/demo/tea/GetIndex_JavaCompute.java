@@ -57,7 +57,7 @@ public class GetIndex_JavaCompute extends MbJavaComputeNode {
 	        
       stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                                   ResultSet.CONCUR_READ_ONLY);
-      ResultSet rs = stmt.executeQuery("SELECT name from Tee where id='"+teaIndex+"'");
+      ResultSet rs = stmt.executeQuery("SELECT name from Tea where id='"+teaIndex+"'");
       if ( rs.first() )
       {
         teaName = rs.getString(1);
