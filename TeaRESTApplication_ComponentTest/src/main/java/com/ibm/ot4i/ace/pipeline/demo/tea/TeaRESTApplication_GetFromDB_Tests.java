@@ -45,7 +45,7 @@ public class TeaRESTApplication_GetFromDB_Tests {
             TestMessageAssembly inputMessageAssembly = new TestMessageAssembly();
 
             // Variables used for setting parameters in Local Environment
-            String id = "1";
+            String id = "0";
 
             // Add Local Environment to Message Assembly for HTTP
             inputMessageAssembly.localEnvironmentPath("HTTP.Input.Path.Segment[0]").setValue("tea");
