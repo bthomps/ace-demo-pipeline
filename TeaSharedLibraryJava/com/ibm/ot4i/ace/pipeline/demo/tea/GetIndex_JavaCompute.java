@@ -45,7 +45,7 @@ public class GetIndex_JavaCompute extends MbJavaComputeNode {
                                             ResultSet.CONCUR_READ_ONLY);
       // This would normally be done externally, but we do it here for convenience
       try {
-        stmt.executeUpdate("CREATE TABLE Tea(id INTEGER, name VARCHAR(128))");
+        stmt.executeUpdate("CREATE TABLE DoesNotExist(id INTEGER, name VARCHAR(128))");
         conn.commit();
       } catch ( java.lang.Throwable jlt ) {
         //jlt.printStackTrace();
