@@ -45,7 +45,7 @@ public class GetIndex_JavaCompute extends MbJavaComputeNode {
                                             ResultSet.CONCUR_READ_ONLY);
       // This would normally be done externally, but we do it here for convenience
       try {
-        stmt.executeUpdate("CREATE TABLE DoesNotExist(id INTEGER, name VARCHAR(128))");
+        stmt.executeUpdate("CREATE TABLE Tea(id INTEGER, name VARCHAR(128))");
         conn.commit();
       } catch ( java.lang.Throwable jlt ) {
         //jlt.printStackTrace();
@@ -57,7 +57,7 @@ public class GetIndex_JavaCompute extends MbJavaComputeNode {
 	        
       stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                                   ResultSet.CONCUR_READ_ONLY);
-      ResultSet rs = stmt.executeQuery("SELECT name from Tea where id='"+teaIndex+"'");
+      ResultSet rs = stmt.executeQuery("SELECT name from Tee where id='"+teaIndex+"'");
       if ( rs.first() )
       {
         teaName = rs.getString(1);
